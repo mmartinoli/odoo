@@ -123,7 +123,7 @@ nginx -g 'daemon off;'\n\
 RUN chmod +x /entrypoint.sh
 
 # Exponer los puertos
-EXPOSE 8080 80 443
+EXPOSE 8080
 
 # Definir el punto de entrada
 ENTRYPOINT ["/entrypoint.sh"]
