@@ -85,7 +85,7 @@ addons_path = /opt/odoo/odoo/addons,/opt/odoo/odoo-custom-addons" > /etc/odoo.co
 
 # Crear archivo de configuración de Nginx
 RUN echo "server {\n\
-    listen 80;\n\
+    listen 8080;\n\
     server_name localhost;\n\
     location / {\n\
         proxy_pass http://localhost:8069;\n\
@@ -123,7 +123,7 @@ nginx -g 'daemon off;'\n\
 RUN chmod +x /entrypoint.sh
 
 # Exponer los puertos
-EXPOSE 8069 80 443
+EXPOSE 8080 80 443
 
 # Definir el punto de entrada
 ENTRYPOINT ["/entrypoint.sh"]
